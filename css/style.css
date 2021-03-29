@@ -368,6 +368,11 @@ button:focus{
         font-size: 40px;
     }
 }
+@media (max-width:576px) {
+    .header-section .nav-bar .menu .head {
+        padding-right: 15px;
+    }
+}
 /* end header */
 /***********************************************/
 /* globa media */
