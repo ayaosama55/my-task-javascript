@@ -75,3 +75,39 @@ toTopButton.addEventListener("click", (e) => {
     });
 });
 
+myIcon = document.querySelector(".iccon");
+myList = document.querySelector(".menu-click > .classic-list >li.dropdown ul");
+myIcon.addEventListener("click" , function () {
+    if(myIcon.dataset.open == "close") {
+        myList.style.display = "block";
+        myIcon.dataset.open = "open";
+        myIcon.classList.remove("fa-caret-down");
+        myIcon.classList.add("fa-sort-up");
+    } else if (myIcon.dataset.open == "open") {
+        myList.style.display = "none";
+        myIcon.dataset.open = "close";
+        myIcon.classList.remove("fa-sort-up");
+        myIcon.classList.add("fa-caret-down");
+    }
+});
+
+
+myListIcon = document.querySelector(".micon");
+mynavlist = document.querySelector(".menu-click"); 
+myListIcon.addEventListener("click", function () {
+    if(myListIcon.dataset.bar == "close") {
+        mynavlist.style.display = "block";
+        myListIcon.dataset.bar = "open";
+        myListIcon.classList.remove("fa-bars");
+        myListIcon.classList.add("fa-times");
+        console.log("aya");
+    } else if (myListIcon.dataset.bar == "open") {
+        mynavlist.style.display = "none";
+        myListIcon.dataset.bar = "close";
+        myListIcon.classList.remove("fa-times");
+        myListIcon.classList.add("fa-bars");
+    }
+});
+
+
+

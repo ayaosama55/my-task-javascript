@@ -156,6 +156,89 @@ button:focus{
     background-color: #717fe0;
 }
 /****************************************/
+/* start menu click */
+.menu-click {
+    position: fixed;
+    width: 100%;
+    top: 87px;
+    z-index: 1000;
+    display: none;
+}
+.menu-click .top {
+    background-color: #222;
+    color: #b2b2b2;
+    padding: 5px 10px;
+}
+.menu-click > .classic-list {
+    background-color: #717FE0;
+    padding: 5px 0;
+}
+.menu-click .top .second ul li {
+    display: inline-block;
+    padding: 7px ;
+    font-size: 13px;
+    border-right: 1px solid #8f8f8f;
+    margin: 5px 0;
+}
+.menu-click .top .second ul li:first-of-type {
+    border-left: 1px solid #8f8f8f;
+}
+.menu-click .top .second ul li a {
+    text-decoration: none;
+    color: #B2B2B2;
+    transition: .3s all ease-in-out;
+}
+.menu-click .top .second ul li a:hover {
+    color: #6c7ae0;
+}
+.menu-click > .classic-list >li {
+    padding: 5px 0;
+    width: 100%;
+}
+.menu-click > .classic-list >li.dropdown {
+    position: relative;
+}
+.menu-click > .classic-list >li.dropdown ul {
+    background-color: #fff;
+    padding: 5px 10px ;
+    display: none;
+}
+.menu-click > .classic-list >li.hot {
+    position: relative;
+}
+.menu-click > .classic-list >li.hot:after {
+    content: "Hot";
+    position: absolute;
+    top: 2px;
+    left: 80px;
+    font-size: 10px;
+    color: #fff;
+    background-color: #F74877;
+    padding: 2px 5px;
+    border-radius: 8px;
+}
+.menu-click > .classic-list >li.dropdown ul li a {
+    color: #333;
+    text-decoration: none;
+}
+.menu-click > .classic-list >li.dropdown i {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.menu-click > .classic-list >li > a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+}
+@media (min-width:992px) {
+    .menu-click {
+        display: none !important;
+    }
+}
+/**************************************/
 .search-box {
     width: 100%;
     height: 100vh;
