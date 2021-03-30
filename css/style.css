@@ -22,6 +22,9 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+.res-img {
+    width: 100%;
+}
 input:focus ,
 button:focus{
     outline: none;
@@ -458,6 +461,86 @@ button:focus{
 }
 /* end header */
 /***********************************************/
+/* start our product */
+.ourProduct {
+    padding: 40px 0;
+}
+.ourProduct .container .product-box {
+    margin: 0 1%;
+    position: relative;
+    transition: .4s all ease-in-out;
+    cursor: pointer;
+    border: 1px solid rgb(202, 202, 202);
+}
+.ourProduct .container .product-box:last-of-type {
+    margin-right: 0;
+}
+.ourProduct .container .product-box .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s all ease-in-out;
+}
+.ourProduct .container .product-box .overlay h3 {
+    color: #333;
+    font-size: 28px;
+    line-height: 1.1;
+    margin: 30px;
+    transition: .4s all ease-in-out;
+}
+.ourProduct .container .product-box .overlay h3 span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+    transition: .4s all ease-in-out;
+}
+.ourProduct .container .product-box .overlay >span {
+    font-size: 15px;
+    line-height: 1.466667;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: #fff;
+    display: none;
+    transition: .5s display ease-in-out;
+}
+.ourProduct .container .product-box:hover .overlay {
+    background-color: rgba(103,117,214,.8);
+}
+.ourProduct .container .product-box:hover .overlay h3 ,
+.ourProduct .container .product-box:hover .overlay h3 span {
+    color: #fff;
+}
+.ourProduct .container .product-box:hover .overlay >span {
+    display: block;
+}
+@media (max-width: 767px) {
+    .ourProduct .flex {
+        flex-wrap: wrap;
+    }
+    .ourProduct .container .product-box {
+        width: 98%;
+        margin: 10px auto;
+    }
+}
+@media (min-width: 768px) and (max-width:1200px) {
+    .ourProduct .flex {
+        flex-wrap: wrap;
+    }
+    .ourProduct .container .product-box {
+        width: 46%;
+        margin-bottom: 20px;
+    }
+    .ourProduct .container .product-box:last-of-type {
+        margin: 10px auto;
+    }
+}
+/************************************************/
 /* globa media */
 @media (max-width: 575px) {
 
