@@ -74,7 +74,6 @@ toTopButton.addEventListener("click", (e) => {
         behavior: "smooth"
     });
 });
-
 myIcon = document.querySelector(".iccon");
 myList = document.querySelector(".menu-click > .classic-list >li.dropdown ul");
 myIcon.addEventListener("click" , function () {
@@ -90,8 +89,6 @@ myIcon.addEventListener("click" , function () {
         myIcon.classList.add("fa-caret-down");
     }
 });
-
-
 myListIcon = document.querySelector(".micon");
 mynavlist = document.querySelector(".menu-click"); 
 myListIcon.addEventListener("click", function () {
@@ -108,6 +105,76 @@ myListIcon.addEventListener("click", function () {
         myListIcon.classList.add("fa-bars");
     }
 });
+/*****************************************************/
+
+let searchBox = document.querySelector(".overview-product .container > .search");
+let searchButton = document.querySelector(".overview-product .container .options .search");
+let sericon = document.querySelector(".overview-product .container .options .search i");
+let filterButton = document.querySelector(".overview-product .container .options .filter");
+let filticon = document.querySelector(".overview-product .container .options .filter i ");
+let filterBox = document.querySelector(".overview-product .filterbox");
+searchButton.addEventListener("click", function () {
+    if(searchButton.dataset.search == "close") {
+        searchButton.dataset.search = "open";
+        searchBox.style.display = "block";
+        searchButton.style.color = "#fff";
+        searchButton.style.backgroundColor = "#717FE0";
+        searchButton.style.border = "1px solid #717FE0";
+        sericon.classList.remove("fa-search");
+        sericon.classList.add("fa-times");
+        filterBox.style.display = "none";
+        filticon.classList.remove("fa-times");
+        filticon.classList.add("fa-sort-amount-down");
+        filterButton.style.color = "#222";
+        filterButton.style.backgroundColor = "#fff";
+        filterButton.style.border = "1px solid rgb(199,199,199)";
+        filterBox.style.display = "none";
+    } else if(searchButton.dataset.search == "open") {
+        searchButton.dataset.search = "close";
+        searchBox.style.display = "none";
+        searchButton.style.color = "#222";
+        searchButton.style.backgroundColor = "#fff";
+        searchButton.style.border = "1px solid rgb(199,199,199)";
+        sericon.classList.remove("fa-times");
+        sericon.classList.add("fa-search");
+    }
+});
+filterButton.addEventListener("click", function () {
+    if(filterButton.dataset.filter == "close") {
+        filterButton.dataset.filter = "open";
+        filterBox.style.display = "flex";
+        filterButton.style.color = "#fff";
+        filterButton.style.backgroundColor = "#717FE0";
+        filterButton.style.border = "1px solid #717FE0";
+        filticon.classList.remove("fa-sort-amount-down");
+        filticon.classList.add("fa-times");
+        sericon.classList.remove("fa-times");
+        sericon.classList.add("fa-search");
+        searchButton.style.color = "#222";
+        searchButton.style.backgroundColor = "#fff";
+        searchButton.style.border = "1px solid rgb(199,199,199)";
+        searchBox.style.display = "none";
+    } else if(filterButton.dataset.filter == "open") {
+        filterButton.dataset.filter = "close";
+        filterBox.style.display = "none";
+        filterButton.style.color = "#222";
+        filterButton.style.backgroundColor = "#fff";
+        filterButton.style.border = "1px solid rgb(199,199,199)";
+        filticon.classList.remove("fa-times");
+        filticon.classList.add("fa-sort-amount-down");
+    }
+});
+
+var menucount = document.getElementById("list");
+var menubar = menucount.getElementsByClassName("but");
+var x;
+for (x = 0; x < menubar.length; x++) {
+    menubar[x].addEventListener("click", function() {
+    var current = menucount.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+}
 
 
 
