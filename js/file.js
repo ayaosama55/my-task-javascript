@@ -1,3 +1,7 @@
+let loadPage = document.querySelector(".load");
+window.onload = function () {
+    loadPage.style.display = "none";
+}
 /* shop cart */
 let shopCart = document.querySelector(".cart");
 let closeIcon = document.querySelector(".close-icon");
