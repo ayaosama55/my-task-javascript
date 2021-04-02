@@ -8,7 +8,6 @@
 }
 body {
     font-family: 'Titillium Web', sans-serif;
-    height: 17000px;
 }
 .flex {
     display: flex;
@@ -759,6 +758,80 @@ button:focus{
     }
 }
 /************************************************/
+footer {
+    background-color: #222;
+    color: #b2b2b2;
+    padding: 50px 0;
+    margin-top: 40px;
+}
+footer section {
+    width: calc(25% - 2%);
+    margin: 20px 1%;
+}
+footer section h3 {
+    padding-bottom: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+footer section ul li {
+    padding-bottom: 10px;
+}
+footer section ul li a {
+    text-decoration: none;
+    color: #b2b2b2;
+    font-size: 14px;
+}
+footer section ul li a:hover {
+    color: #717FE0;
+}
+footer section:nth-of-type(3) ul li {
+    display: inline-block;
+    padding-right: 10px;
+    margin-top: 20px;
+}
+footer section:nth-of-type(3) ul li a {
+    font-size: 18px;
+}
+footer section input {
+    background: none;
+    padding-bottom: 7px;
+    border: none;
+    border-bottom: 1px solid #b2b2b2;
+    width: 200px;
+}
+footer section button {
+    margin-top: 15px;
+    padding: 10px 40px !important;
+    background-color: #717fe0;
+    color: #fff;
+    display: block;
+}
+footer section button:hover {
+    color: #717FE0;
+    background-color: #fff;
+}
+footer >p {
+    position: relative;
+    text-align: center;
+    margin: 20px 0 0;
+}
+@media (max-width:575px){
+    footer .flex {
+        flex-wrap: wrap;
+    }
+    footer section {
+        width: 100% ;
+    }
+}
+@media (max-width:992px) and (min-width:576px){
+    footer .flex {
+        flex-wrap: wrap;
+    }
+    footer section {
+        width: calc(50% - 2%);
+    }
+}
+/***********************************************/
 /* globa media */
 @media (max-width: 575px) {
 
