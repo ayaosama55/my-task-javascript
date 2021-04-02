@@ -74,7 +74,7 @@ window.onscroll = function () {
 }
 toTopButton.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(".header-section").scrollIntoView({
+    document.querySelector(".head").scrollIntoView({
         behavior: "smooth"
     });
 });
