@@ -8,7 +8,7 @@
 }
 body {
     font-family: 'Titillium Web', sans-serif;
-    height: 7000px;
+    height: 17000px;
 }
 .flex {
     display: flex;
@@ -654,22 +654,108 @@ button:focus{
     }
 }
 @media (max-width:767px) {
-    .overview-product .container .flex:first-of-type {
+    .overview-product .container > .flex:first-of-type {
         flex-wrap: wrap;
     }
-    .overview-product .container .flex:first-of-type >div {
+    .overview-product .container > .flex:first-of-type >div {
         width: 100%;
     }
-    .overview-product .container .flex:first-of-type >div div {
+    .overview-product .container .options .filter , 
+    .overview-product .container .options .search
+    {
         width: 130px;
         padding: 10px 0;
         margin-top: 10px;
         margin-right: 10px;
     }
 }
-@media (max-width:992px) {
-    .overview-product .container {
-        max-width: 100%;
+@media (max-width:1200px) {
+    .overview-product > .container {
+        max-width: 100% ;
+    }
+}
+.overview-product .products-over.flex {
+    flex-wrap: wrap;
+}
+.overview-product .products-over .pro-box {
+    width: calc(25% - 2%);
+    margin: 15px 1%;
+}
+.overview-product .products-over .pro-box .image {
+    position: relative;
+    overflow: hidden;
+    
+}
+.overview-product .products-over .pro-box .image .my-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    background-color: #fff;
+    color: #333;
+}
+.overview-product .products-over .pro-box .image .my-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+.overview-product .products-over .pro-box .image img {
+    transition: .5s all ease-in-out;
+}
+.overview-product .products-over .pro-box .image:hover img {
+    transform: scale(1.1);
+}
+.overview-product .products-over .pro-box .image:hover button {
+    display: block;
+}
+.overview-product .products-over .pro-box .info div {
+    padding: 7px 0;
+    position: relative;
+}
+.overview-product .products-over .pro-box .info div a {
+    text-decoration: none;
+    color: rgb(155, 155, 155);
+    transition: .3s;
+}
+.overview-product .products-over .pro-box .info div a:hover ,
+.overview-product .products-over .pro-box .info div i:hover {
+    color: #717fe0;
+}
+.overview-product .products-over .pro-box .info div i {
+    position: absolute;
+    right:5px;
+    color: rgb(155, 155, 155);
+    cursor: pointer;
+}
+.overview-product .products-over .pro-box .info span {
+    color: rgb(107, 107, 107);
+}
+.overview-product .container > .my-button {
+    margin: 30px auto;
+    color: #444;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.overview-product .container > .my-button:hover {
+    color: #fff;
+    background-color: #333;
+}
+@media (max-width: 579px) {
+    .overview-product .products-over .pro-box {
+        width: calc(100% - 2%) !important;
+    }
+}
+@media (min-width: 580px) and (max-width:767px) {
+    .overview-product .products-over .pro-box {
+        width: calc(50% - 2%) !important;
+    }
+}
+@media (min-width: 768px) and (max-width:992px) {
+    .overview-product .products-over .pro-box {
+        width: calc(33.333% - 2%);
     }
 }
 /************************************************/

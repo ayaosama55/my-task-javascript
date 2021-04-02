@@ -167,14 +167,66 @@ filterButton.addEventListener("click", function () {
 
 var menucount = document.getElementById("list");
 var menubar = menucount.getElementsByClassName("but");
+var prodBox = document.querySelectorAll(".overview-product .products-over .pro-box");
 var x;
 for (x = 0; x < menubar.length; x++) {
     menubar[x].addEventListener("click", function() {
-    var current = menucount.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+        var current = menucount.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+        if (this.dataset.prod == "all") {
+            for(var t = 0; t < prodBox.length; t = t + 1){
+                prodBox[t].style.display = "block";
+            }
+        } else if (this.dataset.prod == "women") {
+            for(var t = 0; t < prodBox.length; t = t + 1){
+                if (prodBox[t].dataset.kind == "women") {
+                    prodBox[t].style.display = "block";
+                } else {
+                    prodBox[t].style.display = "none";
+                }
+            }
+        } else if (this.dataset.prod == "men") {
+            for(var t = 0; t < prodBox.length; t = t + 1){
+                if (prodBox[t].dataset.kind == "men") {
+                    prodBox[t].style.display = "block";
+                } else {
+                    prodBox[t].style.display = "none";
+                }
+            }
+        } else if (this.dataset.prod == "bag") {
+            for(var t = 0; t < prodBox.length; t = t + 1){
+                prodBox[t].style.display = "none";
+            }
+        } else if (this.dataset.prod == "shoes") {
+            for(var t = 0; t < prodBox.length; t = t + 1){
+                if (prodBox[t].dataset.kind == "shoes") {
+                    prodBox[t].style.display = "block";
+                } else {
+                    prodBox[t].style.display = "none";
+                }
+            }
+        } else if (this.dataset.prod == "Watches") {
+            for(var t = 0; t < prodBox.length; t = t + 1){
+                if (prodBox[t].dataset.kind == "Watches") {
+                    prodBox[t].style.display = "block";
+                } else {
+                    prodBox[t].style.display = "none";
+                }
+            }
+        }
     });
 }
+
+loveicon = document.querySelectorAll(".overview-product .products-over .pro-box .info div i");
+for(var r = 0; r< loveicon.length ; r++){
+    loveicon[r].addEventListener("click", function() {
+        this.classList.remove("far");
+        this.classList.add("fas");
+        this.style.color = "#717fe0";
+    });
+}
+
 
 
 
