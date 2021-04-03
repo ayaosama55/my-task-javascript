@@ -872,6 +872,22 @@ footer >p {
     text-align: center;
     margin: 20px 0 0;
 }
+/*************************************************/
+.about-head {
+    width: 100%;
+    background-image: url("../images/bg-01.jpg");
+    background-size: cover;
+    padding: 92px 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.about-head h2 {
+    font-size: 50px;
+    line-height: 1.1;
+    color: #fff;
+    text-align: center;
+}
+/***********************************************/
 @media (max-width:575px){
     footer .flex {
         flex-wrap: wrap;
