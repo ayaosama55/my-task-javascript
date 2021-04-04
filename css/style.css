@@ -500,8 +500,8 @@ button:focus{
     .nav-bar .container .menu >ul {
         display: none;
     }
-    .header-section .nav-bar .nav-icon {
-        display: block;
+    .nav-icon {
+        display: block !important;
     }
     .header-section .content h3 {
         font-size: 22px;
