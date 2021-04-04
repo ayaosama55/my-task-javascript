@@ -905,6 +905,59 @@ footer >p {
     }
 }
 /***********************************************/
+.story {
+    padding: 40px 0;
+    margin-top: 40px;
+}
+.story .container .content {
+    width: 58%;
+    margin: 0 1%;
+}
+.story .container .image {
+    width: 36%;
+    margin: 0 2%;
+    overflow: hidden;
+}
+.story .container .image img {
+    transition: 1s;
+    height: 100%;
+}
+.story .container .image img:hover {
+    transform: scale(1.2);
+}
+.story .container .content h2 {
+    font-size: 25px;
+    line-height: 1.2;
+}
+.story .container .content p {
+    line-height: 1.4;
+    color: #b2b2b2;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+@media (max-width:992px) {
+    .story .container {
+        width: 100% !important;
+    }
+}
+@media (max-width:767px) {
+    .story .flex {
+        flex-wrap: wrap;
+    }
+    .story .container > div {
+        width: 100% !important;
+    }
+    .story .container .image {
+        margin-bottom: 20px !important;
+    }
+    .story:first-of-type .flex {
+        flex-direction: column-reverse;
+    }
+    .story:last-of-type {
+        margin-top: 0;
+    }
+}
+/*********************************************/
 /* globa media */
 @media (max-width: 575px) {
 
